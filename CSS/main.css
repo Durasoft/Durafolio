@@ -1,0 +1,187 @@
+/*
+Theme Name: Durafolio
+Theme Ver.: 1.0.0 Alpha
+Description: Durasoft's Durafolio template is a new way to show off yourself.
+Author: Durasoft Company, Team A
+Author URI: https://durasoftware.com/
+
+This template (including sub-files) is copyrighted. Any non-permitted usage is against the law.
+Licence: MIT
+*/
+
+body {
+	background: #fff;
+	font-family: 'PT Sans', sans-serif;
+	color: rgb(54,54,64);
+	overflow-x: hidden;
+}
+p {
+	color: rgb(74,74,74);
+}
+/* - - Left Bar - - */
+	#left-bar {
+		position: fixed;
+		height: 100%;
+		width: 24%;
+		background: rgb(60,90,190);
+		transition: width 0.2s ease;
+		z-index: 1;
+	}
+	.toggle {
+		display: none;
+		margin: auto;
+		color: white;
+		height: 20px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 3px;
+	}
+	.photo {
+		background: rgb(190,200,245);
+		position: absolute;
+		width: 50%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		margin-top: 10%;
+		border-radius: 175px;
+		border: solid rgb(90,120,220);
+		border-width: 10px;
+
+		transition: all 0.2s ease;
+	}
+	.photo:hover {
+		background: rgb(170,180,255);
+		border-width: 5px;
+	}
+	.navlist {
+		margin-top: 100%;
+	}
+	ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    width: 100%;
+	}
+
+	li a {
+	    display: block;
+	    color: #fff;
+	    text-align: center;
+	    font-size: 2rem;
+	    text-decoration: none;
+	}
+
+	/* Change the link color on hover */
+	li a:hover {
+	    color: rgb(180,210,255);
+	}
+
+	.copyright {
+		position: absolute;
+		margin: 3px;
+		bottom: 0;
+		color: rgb(90,120,220);
+		opacity: 1;
+		transition: opacity 0.2s ease;
+		text-decoration: none;
+	}
+/* - End Left Bar - */
+
+/* - - Content - - */
+	#content {
+		position: absolute;
+		min-height: 100%;
+		width: 74%;
+		left: 25%;
+		top: 0;
+		transition: left 0.2s ease;
+		z-index: 0;
+	}
+	/* - - Header - - */
+		.header {
+			margin-top: 5%;
+		}
+		.logo {
+			top: 10%;
+			font-size: 5rem;
+			display: inline;
+		}
+		.underline {
+			color: rgb(60,90,190);
+			text-decoration: underline;
+		}
+		.underline b {
+			color: rgb(54,54,64);
+			text-decoration: none;
+		}
+
+		.header p {
+			display: inline;
+			font-size: 1.5rem;
+		}
+	/* - End Header - */
+	.bio {
+		margin-top: 20%;
+		font-size: 1.25rem;
+	}
+/* - End Content - */
+
+@media only screen and (max-width: 768px) {
+	#left-bar {
+		width: 9%;
+	}
+	.active-bar {
+		width: 40% !important;
+	}
+	.active-logo {
+		opacity: 1 !important;
+	}
+	.toggle {
+		display: block;
+	}
+	.photo {
+		border-width: 3px;
+		width: 75%;
+	}
+	.photo:hover {
+		border-width: 2px;
+	}
+	.logo {
+		font-size: 4rem;
+	}
+	.navlist {
+		opacity: 0;
+		display: none;
+		transition: opacity 0.2s ease;
+	}
+	.navlist ul li a {
+		font-size: 1.25rem !important;
+	}
+	.active-bar-navlist {
+		opacity: 1;
+		display: block;
+	}
+	.copyright {
+		opacity: 0;
+	}
+	#content { 
+		width: 88%;
+		left: 10%;
+	}
+	.active-bar-content {
+		left: 41% !important;
+		overflow-x: hidden;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.navlist ul li a {
+		font-size: 1.6rem;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.logo {
+		font-size: 3.35rem;
+	}
+}
